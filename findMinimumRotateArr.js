@@ -34,3 +34,8 @@ var minArray = function(numbers) {
   }
   return numbers[left]
 };
+
+// 法二
+function name(arr) {
+  return Math.min(...arr)
+}
