@@ -26,3 +26,25 @@
     }
     return res
   };
+
+  var listOfDepth = function(tree) {
+    if(!tree) return []
+    let res = []
+    let queue = [tree]
+    let len =  queue.length
+    
+    while(len ){
+      let root = new ListNode()
+      let head = root;
+      for(let i = 0 ; i < len ;i++){
+        const front = queue.shift()
+        if(!front) continue
+        head.next = new ListNode(front.val)
+        head = head.next
+        queue.push(front.left,front.right)
+      }
+      len = queue.length
+      root.next && res.push(root.next)
+    }
+    return res
+  };
