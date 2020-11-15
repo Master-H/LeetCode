@@ -1,2 +1,1 @@
-console.log(null <=0);
-console.log(-Infinity);
+console.log(new Array(3).fill(1));
