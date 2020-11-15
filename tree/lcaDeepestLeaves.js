@@ -19,13 +19,14 @@
 var lcaDeepestLeaves = function(root) {
     if(!root) return 
     function getDepth(root){
-        if(root) return 0
+        if(!root) return 0
         return Math.max(getDepth(root.left),getDepth(root.right))+1
     }
 
+    // 递归每个节点
     function travel(root){
         if(!root) return 
-        let leftDepth = getDepth(root.left)
+        let leftDepth = getDepth(root.left) // 子树高度
         let rightDepth = getDepth(root.right)
         if(leftDepth === rightDepth) return root
         if(leftDepth > rightDepth){
@@ -34,6 +35,7 @@ var lcaDeepestLeaves = function(root) {
             return travel(root.right)
         }
     }
+   return travel(root)
     
 
 }

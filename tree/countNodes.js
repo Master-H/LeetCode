@@ -19,3 +19,17 @@ function height(root) {
     return !root ? 0 : 1 + height(root.left);
 }
 
+// 非优化的方法
+var countNodes = function(root) {
+    let dfs = (node, res)=>{
+        if(node!=null){
+            dfs(node.left, res)
+            res.push(node. val)
+            dfs(node.right, res)
+        }
+    }
+    let res = []
+    dfs(root, res)
+    return res.length
+};
+

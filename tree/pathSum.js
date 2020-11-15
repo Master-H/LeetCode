@@ -14,11 +14,12 @@ var pathSum = function(root, sum) {
         travel(root.left,sum-root.val)
         travel(root.right,sum-root.val)
     }
-    function preOrder(root){
-        travel(root.val,sum)
-        preOrder(root.left)
-        preOrder(root.right)
+    function preOrder(root,sum){
+        if(!root) return 
+        travel(root,sum)
+        preOrder(root.left,sum)
+        preOrder(root.right,sum)
     }
-    preOrder(root)
+    preOrder(root,sum)
     return count
 };

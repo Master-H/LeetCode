@@ -13,6 +13,7 @@
 var zigzagLevelOrder = function(root) {
     let res = []
     let queue = [root]
+    if(!root) return res
     while(queue.length){
         let len = queue.length
         let path = []
@@ -25,5 +26,5 @@ var zigzagLevelOrder = function(root) {
         }
         res.push(path)
     }
-    res.map((item,idx) => idx%2===1 ? item.reverse():item)
+    return res.map((item,idx) => idx%2===1 ? item.reverse():item)
 };
