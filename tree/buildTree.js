@@ -15,6 +15,7 @@
 //     /  \
 //    15   7
 
+// 思路： 前序第一个肯定是根节点，然后中序当中该根节点值左边是左子树，右边右子数
 var buildTree = function(preorder, inorder) {
     if(!preorder.length) return null
     let root = new TreeNode(preorder[0])
