@@ -18,6 +18,24 @@
 // 向右旋转 3 步: 0->1->2->NULL
 // 向右旋转 4 步: 2->0->1->NULL
 
+// 旋转链表方法
+
 var rotateRight = function(head, k) {
+    if(!head || k <2) return head
+    let count = 0;
+    let current = head;
+    while(++count && current.next){
+        current = current.next
+    }
+    current.next = head // 形成闭环
+    k =  k%count // 去重复
+    let temp = head
+    while(++k < n){
+        head = head.next //打断位置
+    }
+    let temp = head
+    head = head.next
+    temp.next = null
+    return head
 
 };
