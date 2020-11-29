@@ -7,14 +7,19 @@
 // 输出: 1->2->3->4->5
 
 var removeElements = function(head, val) {
-    let dummy = new ListNode()
-    dummy.next = head
-    let cur = dummy
-    while(cur.next){
-        if(cur.next.val === val){
-            cur.next = cur.next.next
+    let newHead = new ListNode()
+    let pre = newHead
+    newHead.next = head 
+    let cur = head
+    while(cur){
+        if(cur.val === val){
+            pre.next = cur.next
+            cur = pre.next
+        }else{  
+            pre = cur
+            cur = cur.next
         }
-        cur = cur.next
+       
     }
-    return cur
+    return  newHead.next
 };
