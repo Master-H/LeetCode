@@ -10,8 +10,8 @@
 //  输出：[1, 2]
 
 var removeDuplicateNodes = function(head) {
-    while(!head) return
-    const set = new set()
+    while(!head) return head
+    const set = new Set()
     set.add(head.val)
     let pre = head
     let cur = head.next
@@ -21,7 +21,7 @@ var removeDuplicateNodes = function(head) {
             cur = cur.next
         }else{
             set.add(cur)
-            pre = pre.next
+            pre = cur
             cur = cur.next
         }
     }
