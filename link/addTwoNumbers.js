@@ -10,40 +10,32 @@
 
 //  
 
-var addTwoNumbers = function(l1, l2) {
-    let arr1 = []
-    let arr2 = []
-    let res = [0]
-    while(l1){
-        arr1.push(l1.val)
-        l1 = l1.next
+var addTwoNumbers = function (l1, l2) {
+    // 创建虚拟头节点
+    let dummyHead = new ListNode(-1);
+    // 将虚拟头结点赋值被cur 之后这个cur会不断地向后移动 
+    let cur = dummyHead;
+    // 总和
+    let sum = 0;
+    // 进位
+    let carry = 0;
+    // 这里使用或运算符, 因为两个链表的长度可能会不一样 
+    while (l1 || l2) {
+      // 首先sum就是两个节点的值添加上进制
+      sum = (l1 ? l1.val : 0) + (l2 ? l2.val : 0) + carry;
+      // 进位 很显然 如果sum 大于10 说明进制为1 否则为 0
+      carry = sum >= 10 ? 1 : 0
+      // 新的链表的下一个节点: 和对10取余
+      cur.next = new ListNode(sum % 10);
+      // 将cur移动到下一个节点
+      cur = cur.next;
+      // l1 和 l2 都存在的情况下 也都往后面移动
+      l1 && (l1 = l1.next);
+      l2 && (l2 = l2.next);
     }
-    while(l2){
-        arr2.push(l2.val)
-        l2 = l2.next
-    }
-
-    for(let i = arr1.length -1,j = arr2.length-1,k=0;i >=0 || j>=0 ; i--,j--,k++){
-        let val1 = i >=0 ? arr1[i]:0
-        let val2 = j>= 0 ?arr2[j]:0
-        let sum = val1 + val2 + res[k]
-        res[k] = sum % 10
-        res[k+1] = sum/10 ||0
-    }
-
-    let start = new ListNode(res[res.length-2]) // 倒数第二个
-    let node1 = start
-    for(let i = res.length - 3; i>=0; i--){
-        let node = new ListNode(res[i])
-        node1.next = node
-        node1 = node
-    }
-
-    if(res[res.length-1]){
-        let head = new ListNode(res[res.length-1])
-        head.next = start
-        return head
-    }
-    return start
-
-};
+    // 如果最后两个数相加完毕之后还有可能 
+    carry && (cur.next = new ListNode(carry));
+    // 最后将新链表的头结点返回出去就行
+    return dummyHead.next;
+  };  
+  
