@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-13 21:17:29
- * @LastEditTime: 2020-12-13 21:26:46
+ * @LastEditTime: 2020-12-13 21:28:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /code/fe/leetcode-js/link/链表升序-sortList.js
@@ -12,7 +12,7 @@
 
 // 思路：nlogn,可以想到归并，快排，二分，v8内核，sort通过归并实现
 var sortList = function(head) {
-    if(!head) return head
+    if(!head) return null
     let list = []
     while(head){
         let temp = head.next
