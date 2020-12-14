@@ -1,8 +1,8 @@
 /*
- * @Author: your name
+ * @Author: huangxingyuan
  * @Date: 2020-12-14 22:42:26
- * @LastEditTime: 2020-12-14 23:15:14
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-12-14 23:21:45
+ * @LastEditors: huangxingyuan
  * @Description: In User Settings Edit
  * @FilePath: /code/fe/leetcode-js/26-删除排序数组重复项-removeDuplicates/index.js
  */
@@ -24,7 +24,7 @@ var removeDuplicates = function(nums) {
     }
     return k+1
 };
-// splice方法
+// splice方法a
 var removeDuplicates = function(nums) {
     for (let i = 0;i < nums.length ;i++){
         if(nums[i] === nums[i+1]){
