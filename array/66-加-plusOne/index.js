@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-16 23:33:59
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-17 00:01:17
+ * @LastEditTime: 2020-12-17 00:11:53
  * @Description: leetcode execise
  */
 
@@ -34,3 +34,21 @@ var plusOne = function(digits) {
     return res =  res[0] ? res : res.slice(1)
  
 };
+
+var plusOne = function(digits) {
+    let i = digits.length - 1;
+    while (i >= 0) {
+        if (digits[i] != 9) {
+            digits[i] ++;
+            return digits;
+        }
+        if (digits[i] == 9) {
+            digits[i] = 0;
+        }
+        i --;
+    }
+    let res = Array(digits.length + 1).fill(0);
+    res[0] = 1;
+    return res;
+};
+
