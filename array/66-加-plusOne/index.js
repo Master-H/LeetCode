@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-16 23:33:59
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-17 00:11:53
+ * @LastEditTime: 2020-12-18 00:14:13
  * @Description: leetcode execise
  */
 
@@ -35,20 +35,15 @@ var plusOne = function(digits) {
  
 };
 
+// 解法2
 var plusOne = function(digits) {
-    let i = digits.length - 1;
-    while (i >= 0) {
-        if (digits[i] != 9) {
-            digits[i] ++;
+    for (let i = digits.length - 1; i >= 0; i--) {
+        digits[i]++;
+        digits[i] = digits[i] % 10;
+        if (digits[i] != 0) {
             return digits;
         }
-        if (digits[i] == 9) {
-            digits[i] = 0;
-        }
-        i --;
     }
-    let res = Array(digits.length + 1).fill(0);
-    res[0] = 1;
-    return res;
+    digits.unshift(1);
+    return digits
 };
-
