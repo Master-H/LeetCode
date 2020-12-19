@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-19 18:37:56
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-19 18:38:51
+ * @LastEditTime: 2020-12-19 20:44:42
  * @Description: leetcode execise
  */
 // 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
@@ -20,5 +20,11 @@
 // 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
 
 var maxProfit = function(prices) {
-
+    let pre = prices[0]
+    let max = 0
+    prices.forEach((value) => {
+        let pre = Math.min(pre,val)
+        let max = Math.max(max,value- pre)
+    })
+    return max
 };
