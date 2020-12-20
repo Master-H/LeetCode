@@ -29,8 +29,9 @@ var letterCombinations = function(digits) {
         'tuv',
         'wxyz',
     ]
-    let queue = ['']
+  
     if (!digits|| !digits.length ) return []
+    let queue = ['']
     for(let digit of digits){
         let len = queue.length
         for(let i = 0; i < len;i++){
