@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-27 20:30:45
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-27 20:31:07
+ * @LastEditTime: 2020-12-27 21:12:47
  * @Description: 文件功能描述
  */
 // 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
@@ -21,3 +21,22 @@
 // 输出：12
 // 解释：偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。
 //      偷窃到的最高金额 = 2 + 9 + 1 = 12 。
+
+
+// 解题思路： 1、偷第n个房间，那么总金额：d(n-2)+d(n) 2、不偷第n个房间，总金额d(n-1),所以第n个房间最大值max = Math.max( d(n-2) + d(n), d(n-1))
+// 可以考虑用滚动数组方式
+var rob = function(nums) {
+    let len = nums.length
+    if(len === 0) return 0
+    if(len === 1) return nums[0]
+    if(len === 2) return Math.max(nums[0],nums[1])
+    let first = nums[0]
+    let second = Math.max(nums[0],nums[1])
+ 
+    for(let i = 2; i < nums.length; i++){
+        let temp = second
+         second = Math.max(first+ nums[i],second)
+        first = temp
+    }
+    return second
+};
