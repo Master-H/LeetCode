@@ -42,6 +42,7 @@ var combinationSum = function(candidates, target) {
         }
         if(target === 0){
             res.push(combine)
+            return 
         }
         // 跳过当前
         dfs(target,[...combine],idx+1)

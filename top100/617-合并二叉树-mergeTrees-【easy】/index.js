@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-27 23:13:59
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-27 23:22:49
+ * @LastEditTime: 2020-12-28 22:22:51
  * @Description: 文件功能描述
  */
 // 给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
@@ -34,4 +34,5 @@ var mergeTrees = function(t1, t2) {
     t1.val += t2.val
     t1.left =  mergeTrees(t1.left,t2.left)
     t1.right =  mergeTrees(t1.right,t2.right)
+    return t1
 };
