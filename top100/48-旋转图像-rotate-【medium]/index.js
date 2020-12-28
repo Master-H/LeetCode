@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-28 23:09:45
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-28 23:10:16
+ * @LastEditTime: 2020-12-28 23:49:35
  * @Description: 文件功能描述
  */
 // 给定一个 n × n 的二维矩阵表示一个图像。
@@ -40,3 +40,19 @@
 //   [12, 6, 8, 9],
 //   [16, 7,10,11]
 // ]
+// 思路： 先水平反转，再对角线反转即可
+var rotate = function(matrix) {
+    let len = matrix.length
+ // 水平反转
+    for(let i = 0; i < Math.floor(len/2);i++){
+        for(let j = 0; j < len;j++){
+            [matrix[i][j],matrix[len - i - 1][j]] = [matrix[len - i - 1][j],matrix[i][j]]
+        }
+    }
+    // 对角线反转
+    for(let i = 0; i < len;i++){
+        for(let j = 0; j < i;j++){
+            [matrix[i][j],matrix[j][i]] = [matrix[j][i],matrix[i][j]]
+        }
+    }
+};
