@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2021-01-01 10:40:13
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-01 12:13:05
+ * @LastEditTime: 2021-01-01 12:14:26
  * @Description: 文件功能描述
  */
 // 你这个学期必须选修 numCourse 门课程，记为 0 到 numCourse-1 。
@@ -62,4 +62,7 @@ const canFinish = (numCourses, prerequisites) => {
     return count == numCourses; // 选了的课等于总课数，true，否则false
   };
   
-  
+  let arr = [5,7]
+  for(let [idx,val] of arr.entries()){
+      console.log(idx,val);
+  }
