@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2021-01-02 11:37:06
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-02 16:58:36
+ * @LastEditTime: 2021-01-02 17:06:40
  * @Description: 文件功能描述
  */
 // 给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。
@@ -20,6 +20,8 @@
 
 // 输入：nums = [7,7,7,7,7,7,7]
 // 输出：1
+// 解题思路参考：https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/
+// 关键： nums[i] > nums[j],可接在nums[j]后面，满足上升子序列，此情况下最长上升子序列长度为 dp[j] + 1，不满足直接跳过
 
 var lengthOfLIS = function(nums) {
     let max = 1

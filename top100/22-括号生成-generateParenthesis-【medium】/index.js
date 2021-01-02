@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-21 23:19:30
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-21 23:50:41
+ * @LastEditTime: 2021-01-02 17:23:41
  * @Description: 文件功能描述
  */
 // 数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的 括号组合。
@@ -19,7 +19,7 @@
 // 解题思路
 // 1、构建括号就是不停的选括号，要么左要么右括号
 // 2、约束：
-//     只要有‘（’就可以选‘）’
+//     只要有‘（’就可以选‘（’
 //     只有当')'剩余比'('多才可以选‘）’
 //     当构建长度达到2*n就可以结束递归
 // 参考解法链接：https://leetcode-cn.com/problems/generate-parentheses/solution/shou-hua-tu-jie-gua-hao-sheng-cheng-hui-su-suan-fa/
