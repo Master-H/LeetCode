@@ -1,9 +1,16 @@
+/*
+ * @Author: huangxingyuan
+ * @Date: 2020-10-12 20:25:21
+ * @LastEditors: huangxingyuan
+ * @LastEditTime: 2021-01-03 10:42:58
+ * @Description: 文件功能描述
+ */
 
 // 二分递归
 function quickSort(arrayList) {
   if (arrayList.length === 0 || arrayList.length === 1) return arrayList;
   const mid = Math.floor(arrayList.length / 2);
-  const midValue = arrayList.splice(mid,1)[0]
+  const midValue = arrayList.splice(mid,1)[0] //直接 nums[mid]会出现无限递归，因为如果数组[2,2,2]，那么右边的长度一直是【2，2，2】
   const left = [];
   const right = [];
   arrayList.map(item => {
@@ -14,6 +21,3 @@ function quickSort(arrayList) {
 }
 const arr = [3, 77, 66, 55];
 
-const res = quickSort(arr);
-
-console.log(res);
