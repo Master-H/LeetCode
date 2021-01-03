@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2021-01-03 18:40:01
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-03 18:40:22
+ * @LastEditTime: 2021-01-03 18:40:01
  * @Description: 文件功能描述
  */
 // 给出二叉 搜索 树的根节点，该树的节点值各不相同，请你将其转换为累加树（Greater Sum Tree），使每个节点 node 的新值等于原树中大于或等于 node.val 的值之和。
