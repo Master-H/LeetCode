@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2021-01-03 18:41:26
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-03 19:22:38
+ * @LastEditTime: 2021-01-03 19:43:04
  * @Description: 文件功能描述
  */
  // 给定一个整数数组和一个整数 k，你需要找到该数组中和为 k 的连续的子数组的个数。
@@ -44,7 +44,8 @@ var subarraySum = function(nums, k) {
         // 一开始map = {0:1},第一次pre=7,pre-k = 0,map有，并且此时map没有7这个key,所以此时map={0:1,7:1}
         // 继续累加pre = 14, pre-7 =7,而map有7这个key所有计数继续加1，其实相当于又有一段值累加为7，共两段
         if(map.has(pre-k)){ // 是目标k的倍数，所有计数加1，因为，第一次pre=7,map={7,1}
-            count++
+            //因为 34-1134，其实一共有3段值，
+            count += map.get(pre-k)
         }
         if(map.has(pre)){ // 累加的合记录下来
             map.set(pre,map.get(pre)+1)
