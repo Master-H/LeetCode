@@ -1,3 +1,10 @@
+/*
+ * @Author: huangxingyuan
+ * @Date: 2021-01-07 22:28:07
+ * @LastEditors: huangxingyuan
+ * @LastEditTime: 2021-01-07 22:55:03
+ * @Description: 文件功能描述
+ */
 // 最大二叉树
 // 给定一个不含重复元素的整数数组。一个以此数组构建的最大二叉树定义如下：
 
@@ -22,25 +29,11 @@
 //         1
 
 var constructMaximumBinaryTree = function(arr) {
-    if(!arr.length) return 
+    if(!arr.length) return null
     let max = Math.max(...arr)
-    let tree = new TreeNode(max)
-    const index = arr.indexOf(max)
-
-    tree.left = constructMaximumBinaryTree(arr.slice(0,index))
-    tree.right = constructMaximumBinaryTree(arr.slice(index+1))
-
-    return tree
-
-
+    let maxIndex = arr.indexOf(max)
+    let root = new TreeNode(max)
+    root.left = constructMaximumBinaryTree(arr.slice(0,maxIndex))
+    root.right = constructMaximumBinaryTree(arr.slice(maxIndex+1))
+    return root
 };
-var constructMaximumBinaryTree = function(arr) {
-    if(arr.length==0) return null
-    let big=Math.max(...arr)
-    let tree=new TreeNode(big)
-    tree.left=constructMaximumBinaryTree(arr.slice(0,arr.indexOf(big)))
-    tree.right=constructMaximumBinaryTree(arr.slice(arr.indexOf(big)+1))
-    return tree
-};
-  
-
