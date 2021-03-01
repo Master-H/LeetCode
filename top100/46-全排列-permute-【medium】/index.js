@@ -40,3 +40,23 @@ var permute = function(nums) {
     dfs([],new Set())
     return res
 };
+let paths = []
+let used = {}
+function dfs(path){
+    if(path.length === nums.length){
+        return paths.push(path.slice())
+    }
+    for(let val of nums){
+        if(!used[val]){
+            path.push(val)
+            used[val] = true
+            dfs(path)
+            path.pop()
+            used[val] = false
+        }
+    }
+}
+dfs([])
+return paths
+
+}

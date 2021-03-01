@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-20 22:58:36
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-21 00:11:38
+ * @LastEditTime: 2021-01-27 10:53:02
  * @Description: 文件功能描述
  */
 // 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
@@ -36,4 +36,22 @@ var removeNthFromEnd = function(head, n) {
 };
 
 
+// var kthToLast = function(head, k) {
+//     // 双指针
+//     var left = head, right = head;
+//     while(k > 0) {
+//         right = right.next;
+//         k--;
+//     }
+//     while(right !== null) {
+//         left = left.next;
+//         right = right.next;
+//     }
+//     return left.val
+  
+  
+//   };
+  
+  
+  
 

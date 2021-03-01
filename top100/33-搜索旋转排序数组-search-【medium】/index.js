@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-27 12:06:20
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-27 16:28:07
+ * @LastEditTime: 2021-01-27 10:54:21
  * @Description: 文件功能描述
  */
 // 升序排列的整数数组 nums 在预先未知的某个点上进行了旋转（例如， [0,1,2,4,5,6,7] 经旋转后可能变为 [4,5,6,7,0,1,2] ）。
@@ -58,7 +58,7 @@ var search = function(nums, target) {
     let l = 0
     let r = len -1
     while(l <= r){
-        let mid = l + ((r-l) >> 1)
+        let mid = l+r>>1
         if(nums[mid] === target) return mid
         if(nums[l] <= nums[mid]){
             if(nums[l] <= target && nums[mid] >= target){
@@ -76,3 +76,23 @@ var search = function(nums, target) {
     }
     return -1
    };
+
+
+   // 寻找最小
+//    var findMin = function(nums) {
+//     let len = nums.length;
+//     let left = 0;
+//     let right = len - 1;
+//     let mid  = 0
+//     while(left < right){
+//          mid = (left+right)>>1
+//         if(nums[left] < nums[right]){// 完全有序
+//           right = mid
+//         }else if(nums[left] > nums[right]){
+//             left++
+//         }else{
+//             right--
+//         }
+//     }
+//     return nums[left]
+//   };

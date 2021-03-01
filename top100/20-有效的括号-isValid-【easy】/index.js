@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2020-12-21 23:51:44
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-27 11:38:28
+ * @LastEditTime: 2021-02-02 17:27:57
  * @Description: 文件功能描述
  */
 // 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -51,3 +51,19 @@ var isValid = function (s) {
     return cache.length ? false : true 
     
 };
+
+function long(str){
+    let len = str.length
+    let dp = Array.from(new Array(len),() => new Array(len).fill(0))
+    let result = ''
+    for(let i =len-1 ;i >=0 ;i--){
+        for(let j=i;j<len;j++){
+            dp[i][j] = s[i] === s[j] && (dp[i+1][j-1] || j-i<2)
+            if(dp[i][j] && j-i+1>result.length){
+                result = str.slice(i,j)
+            }
+        }
+        
+    }
+    return result
+}

@@ -2,7 +2,7 @@
  * @Author: huangxingyuan
  * @Date: 2021-01-04 23:50:07
  * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-07 22:17:38
+ * @LastEditTime: 2021-01-26 11:26:57
  * @Description: 文件功能描述
  */
 // 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
@@ -21,10 +21,15 @@
 //         7    2      1
 // 返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5->4->11->2。
 
-var hasPathSum = function(root, sum) {
-    if(!root) return false
-    if(!root.left && !root.right){
-        return sum - root.val
+// 
+function hasPathSum(root,sum){
+    function dfs(root,sum){
+        if(!root) return false
+        if(!root.left && !root.right && root.val - sum ===0){
+            return true
+        }
+        return dfs(root.left,sum-root.val) ||  dfs(root.right,sum-root.val)
+       
     }
-    return hasPathSum(root.left) || hasPathSum(root.right)
+    return dfs(root,sum)
 }

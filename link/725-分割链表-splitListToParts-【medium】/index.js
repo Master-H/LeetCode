@@ -1,3 +1,10 @@
+/*
+ * @Author: huangxingyuan
+ * @Date: 2021-01-26 17:21:23
+ * @LastEditors: huangxingyuan
+ * @LastEditTime: 2021-01-26 17:21:28
+ * @Description: 文件功能描述
+ */
 给定一个头结点为 root 的链表, 编写一个函数以将链表分隔为 k 个连续的部分。
 
 每部分的长度应该尽可能的相等: 任意两部分的长度差距不能超过 1，也就是说可能有些部分为 null。
@@ -40,7 +47,7 @@ var splitListToParts = function(root, k) {
     // head !== null ，因为存在root = [1,2,3],k=5,到第三个时候其实没必要走循环了
     for(let i = 0; head!== null && i < k; i++){
         res[i] = head
-        let bigList = smallLen + (bigLen--> 0 ? 1 : 0)
+        let bigList = smallLen + (bigLen-- > 0 ? 1 : 0)
         while(bigList>1){
             head = head.next
             bigList--

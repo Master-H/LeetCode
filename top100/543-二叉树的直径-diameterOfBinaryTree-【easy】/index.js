@@ -34,3 +34,23 @@ var diameterOfBinaryTree = function(root) {
     getDepth(root)
     return res
 };
+
+// 方法二
+function diameterOfBinaryTree(root){
+    let max = 0
+    function dfs(root){
+        if(!root) return 
+        let left = getDepth(root.left)
+        let right = getDepth(root.right)
+        max = Math.max(left+right,max)
+        dfs(root.left)
+        dfs(root.right)
+        
+    }
+    function getDepth(root){
+        if(!root) return 0
+        return Math.max(getDepth(root.left),getDepth(root.right)) + 1
+    }
+    dfs(root)
+    return max
+}

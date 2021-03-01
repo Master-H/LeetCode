@@ -1,4 +1,12 @@
-// 给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
+/*
+ * @Author: huangxingyuan
+ * @Date: 2021-01-26 10:37:12
+ * @LastEditors: huangxingyuan
+ * @LastEditTime: 2021-01-26 11:12:21
+ * @Description: 文件功能描述
+ */
+// 给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
+
 // 示例:
 
 // 输入: 3
@@ -12,7 +20,6 @@
 //     /     /       \                 \
 //    2     1         2                 3
 
-
 // 标签：动态规划
 // 假设 n 个节点存在二叉排序树的个数是 G (n)，令 f(i) 为以 i 为根的二叉搜索树的个数，则
 // G(n) = f(1) + f(2) + f(3) + f(4) + ... + f(n)
@@ -23,16 +30,14 @@
 // 综合两个公式可以得到 卡特兰数 公式
 // G(n) = G(0)*G(n-1)+G(1)*(n-2)+...+G(n-1)
 
-
-var numTrees = function(n) {
-    const G = new Array(n+1).fill(0)
-    G[0] = 1
+function numTrees(n){
+    let G = new Array(n).fill(0)
+    G[0] = 0
     G[1] = 1
-    for(let i = 2; i <= n +1;i++){
-        for(j=1;j <= i;j++){
+    for(let i = 2; i < n;i++){
+        for(let j = 1; j < i+1;j++){
             G[i] += G[j-1]*G[i-j]
         }
-        
     }
     return G[n]
-};
+}

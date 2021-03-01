@@ -1,3 +1,10 @@
+/*
+ * @Author: huangxingyuan
+ * @Date: 2021-01-26 23:18:41
+ * @LastEditors: huangxingyuan
+ * @LastEditTime: 2021-01-31 22:05:33
+ * @Description: 文件功能描述
+ */
 // 把一个数字最开始的若干个元素搬到数组的末尾，称之为数组的旋转。
 //输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1
 // 我们先从示例1，列举出递增数组[1, 2, 3, 4, 5]的所有可能旋转的情况：
@@ -17,25 +24,23 @@
  * @param {number[]} numbers
  * @return {number}
  */
-var minArray = function(numbers) {
-  let len = numbers.length;
-  let left = 0;
-  let right = len - 1;
-  let mid  = 0
-  while(left < right){
-       mid = left + Math.floor((right - left) / 2)
-      if(numbers[left] < numbers[right]){// 完全有序
-        right = mid
-      }else if(numbers[left] > numbers[right]){
-          left++
+function findMin(nums){
+  let l = 0
+  let r = nums.length
+  while(l<r){
+      let mid = r+l>>1
+      if(nums[l] < nums[r]){
+         r = mid
+      }else if(nums[l] > nums[r]){
+          l++
       }else{
-          right--
+          r--
       }
   }
-  return numbers[left]
-};
-
-// 法二
-function name(arr) {
-  return Math.min(...arr)
+  return nums[l]
 }
+  
+  // 法二
+  function name(arr) {
+    return Math.min(...arr)
+  }

@@ -25,15 +25,15 @@ function fibonacci(n) {
 
 var fib = function(n) {
   if(n === 0) return 0
-if(n === 1) return 1
-let one = 0 
-let two = 1
-let res ;
-for(var i = 1; i < n; i++){
- res = (one + two)%1000000007
- one = two
- two = res
-}
-return res
+  if(n === 1) return 1
+  let one = 0 
+  let two = 1
+  let res ;
+  for(var i = 1; i < n; i++){
+  res = (one + two)%1000000007
+  one = two
+  two = res
+  }
+  return res
 
 };
