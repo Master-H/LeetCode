@@ -14,17 +14,6 @@ var swapPairs = function(head) {
         pre.next = next 
         head.next = next.next
         next.next = head
-        
-        // 超时
-        // next.next = head
-        // pre.next = next 
-        // head.next = next.next
-
-        // 超时
-        // pre.next = next
-        // next.next = head
-        // head.next = next.next
-        
         pre = head
         head =  head.next
     }

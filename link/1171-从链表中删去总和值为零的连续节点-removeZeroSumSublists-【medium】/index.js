@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-12-13 22:33:01
- * @LastEditTime: 2020-12-14 21:50:44
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /code/fe/leetcode-js/link/删除和0连续节点-removeZeroSumSublists.js
- */
 var removeZeroSumSublists = function(head) {
     while(!head) return null
     let map = new Map()

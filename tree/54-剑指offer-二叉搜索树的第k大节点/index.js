@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-25 22:08:42
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-25 22:14:21
- * @Description: 文件功能描述
- */
 
 // 给定一棵二叉搜索树，请找出其中第k大的节点。
 

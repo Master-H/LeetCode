@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2020-10-12 20:25:21
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-03 10:42:58
- * @Description: 文件功能描述
- */
 
 // 二分递归
 function quickSort(arrayList) {

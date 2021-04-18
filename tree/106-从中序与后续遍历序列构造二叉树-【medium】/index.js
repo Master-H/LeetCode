@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-04 22:20:17
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-04 23:16:27
- * @Description: 文件功能描述
- */
 // 根据一棵树的前序遍历与中序遍历构造二叉树。
 
 // 注意:

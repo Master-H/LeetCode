@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2020-12-14 23:18:26
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-14 23:41:13
- * @Description: leetcode
- */
 
 // 给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。
 

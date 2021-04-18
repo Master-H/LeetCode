@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2020-12-16 23:33:59
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-18 00:14:13
- * @Description: leetcode execise
- */
 
 // 给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
 

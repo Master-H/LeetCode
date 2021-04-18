@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-04 21:53:58
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-04 22:09:27
- * @Description: 文件功能描述
- */
 // 给定一个二叉树，返回所有从根节点到叶子节点的路径。
 
 // 说明: 叶子节点是指没有子节点的节点。

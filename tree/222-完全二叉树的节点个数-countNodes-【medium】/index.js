@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-04 23:39:10
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-04 23:46:13
- * @Description: 文件功能描述
- */
 // 给出一个完全二叉树，求出该树的节点个数。
 
 // 说明：

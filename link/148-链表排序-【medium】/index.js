@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-12-13 21:17:29
- * @LastEditTime: 2020-12-13 21:28:33
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /code/fe/leetcode-js/link/链表升序-sortList.js
- */
 // //给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。
 // 进阶：
 // 你可以在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序吗？

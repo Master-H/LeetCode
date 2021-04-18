@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-26 17:23:53
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-26 17:41:51
- * @Description: 文件功能描述
- */
 // 给你两个链表 list1 和 list2 ，它们包含的元素分别为 n 个和 m 个。
 
 // 请你将 list1 中第 a 个节点到第 b 个节点删除，并将list2 接在被删除节点的位置。

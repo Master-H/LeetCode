@@ -1,11 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2020-12-14 22:42:26
- * @LastEditTime: 2020-12-14 23:21:45
- * @LastEditors: huangxingyuan
- * @Description: In User Settings Edit
- * @FilePath: /code/fe/leetcode-js/26-删除排序数组重复项-removeDuplicates/index.js
- */
 
 // 给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
 

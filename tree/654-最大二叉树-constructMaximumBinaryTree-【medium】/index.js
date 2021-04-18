@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-07 22:28:07
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-07 22:55:03
- * @Description: 文件功能描述
- */
 // 最大二叉树
 // 给定一个不含重复元素的整数数组。一个以此数组构建的最大二叉树定义如下：
 

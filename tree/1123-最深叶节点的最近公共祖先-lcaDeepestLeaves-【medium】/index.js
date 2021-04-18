@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-25 22:17:08
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-25 22:44:52
- * @Description: 文件功能描述
- */
 // 回想一下：
 // 叶节点 是二叉树中没有子节点的节点
 // 树的根节点的 深度 为 0，如果某一节点的深度为 d，那它的子节点的深度就是 d+1

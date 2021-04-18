@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2020-12-19 16:36:09
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2020-12-19 17:23:25
- * @Description: leetcode execise
- */
 // 在杨辉三角中，每个数是它左上方和右上方的数的和。
 // 输入: 5
 // 输出:

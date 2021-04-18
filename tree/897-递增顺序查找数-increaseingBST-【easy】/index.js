@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-07 22:59:17
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-07 23:16:48
- * @Description: 文件功能描述
- */
 // 给你一个树，请你 按中序遍历 重新排列树，使树中最左边的结点现在是树的根，并且每个结点没有左子结点，只有一个右子结点。
 
 //  

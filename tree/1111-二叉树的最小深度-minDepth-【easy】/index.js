@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-25 22:59:55
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-25 23:13:52
- * @Description: 文件功能描述
- */
 // 给定一个二叉树，找出其最小深度。
 
 // 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。

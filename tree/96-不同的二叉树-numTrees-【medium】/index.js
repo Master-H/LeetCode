@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-26 10:37:12
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-26 11:12:21
- * @Description: 文件功能描述
- */
 // 给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
 
 // 示例:

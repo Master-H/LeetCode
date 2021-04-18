@@ -1,10 +1,3 @@
-/*
- * @Author: huangxingyuan
- * @Date: 2021-01-25 22:51:01
- * @LastEditors: huangxingyuan
- * @LastEditTime: 2021-01-25 22:56:22
- * @Description: 文件功能描述
- */
 // DFS
 function dfs(root){
     if(!root) return 0
